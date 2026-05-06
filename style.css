@@ -1,0 +1,396 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#f5f5f5;
+}
+
+header{
+  background:#ff5722;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  color:white;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:bold;
+}
+
+.search-box{
+  display:flex;
+  width:45%;
+}
+
+.search-box input{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:5px 0 0 5px;
+}
+
+.search-box button{
+  padding:10px 15px;
+  border:none;
+  background:#222;
+  color:white;
+  cursor:pointer;
+}
+
+.menu span{
+  margin-left:15px;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.banner{
+  background:linear-gradient(to right,#ff5722,#ff9800);
+  padding:60px;
+  text-align:center;
+  color:white;
+}
+
+.banner h1{
+  font-size:45px;
+}
+
+.banner button{
+  margin-top:15px;
+  padding:12px 20px;
+  border:none;
+  background:white;
+  color:#ff5722;
+  font-weight:bold;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.kategori{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  padding:20px;
+  background:white;
+  flex-wrap:wrap;
+}
+
+.kategori div{
+  background:#ffe0b2;
+  padding:12px 18px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.kategori div:hover{
+  background:#ff5722;
+  color:white;
+}
+
+.container{
+  padding:30px;
+}
+
+.products{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr); /* INI YANG DIUBAH */
+  gap:20px;
+  margin-top:20px;
+}
+
+.card{
+  background:white;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.1);
+  text-align:center;
+  width:100%;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.price{
+  color:#ff5722;
+  font-size:22px;
+  font-weight:bold;
+  margin:10px 0;
+}
+
+button{
+  background:#ff5722;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+button:hover{
+  background:#222;
+}
+
+.checkout{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  margin-top:40px;
+}
+
+.cart-popup{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  z-index:999;
+}
+
+.cart-box{
+  background:white;
+  width:400px;
+  max-width:95%;
+  padding:30px;
+  border-radius:15px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.close{
+  float:right;
+  font-size:25px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.cart-box input,
+.cart-box select,
+.checkout input,
+.checkout select{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+
+.main-footer {
+    background-color: #e67e22; /* Warna orange sesuai gambar kamu */
+    color: rgb(255, 255, 255);
+    padding: 40px 0 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-box .tagline {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer-box .desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    text-align: left;
+    margin-top: 30px;
+    padding: 20px 50px 0;
+    border-top: 1px solid #ffffff;
+    font-size: 13px;
+}
+
+@media (max-width: 1024px){
+  .products{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px){
+  .products{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px){
+  .products{
+    grid-template-columns: 1fr;
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 15px;
+  margin: 15% auto;
+  width: 240px;        /* ukuran kecil */
+  text-align: center;
+  border-radius: 12px;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Styling tambahan untuk form Admin & Login */
+#adminSection input, #loginModal input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#adminSection h3 {
+  margin-bottom: 10px;
+  color: #ff5722;
+}
+
+/* Memastikan modal login muncul di depan */
+#loginModal {
+  z-index: 1000;
+}
+/* Styling Ikon Hamburger (3 Garis) */
+.hamburger {
+  display: none; /* Sembunyi di desktop */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Responsivitas Mobile */
+@media (max-width: 768px) {
+  header {
+    position: relative;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: flex; /* Munculkan ikon garis tiga di mobile */
+  }
+
+  .search-box {
+    order: 3; /* Pindahkan kotak pencarian ke bawah header */
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Mengatur Menu agar berbaris ke bawah */
+  .menu {
+    display: none; /* Sembunyi secara default */
+    width: 100%;
+    flex-direction: column; /* BERBARIS KE BAWAH */
+    background: #ff5722;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 20px;
+    gap: 20px;
+    z-index: 100;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+
+  /* Class untuk memunculkan menu saat diklik */
+  .menu.active {
+    display: flex;
+  }
+
+  .menu span {
+    margin-left: 0;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+  }
+}
